@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6b8e23;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.green_garden_project_.PagePlanteController">
+   <children>
+      <HBox alignment="CENTER" layoutY="69.0" prefHeight="26.0" prefWidth="600.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="48.0" prefWidth="169.0" spacing="5.0">
+               <children>
+                  <Button fx:id="buttonGeneral" alignment="CENTER" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #daa520;" text="Général" />
+                  <RadioButton fx:id="rbuttonGeneral" disable="true" mnemonicParsing="false" selected="true" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="77.0" prefWidth="155.0" spacing="5.0">
+               <children>
+                  <Button fx:id="buttonGraphique" alignment="CENTER" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #daa520;" text="Graphique" />
+                  <RadioButton fx:id="rbuttonGraphique" disable="true" mnemonicParsing="false" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="318.0" layoutY="10.0" prefHeight="77.0" prefWidth="155.0" spacing="5.0">
+               <children>
+                  <Button fx:id="buttonTaches" alignment="CENTER" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #daa520;" text="Tâche" />
+                  <RadioButton fx:id="rbuttonTaches" disable="true" mnemonicParsing="false" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TextArea fx:id="nom_plantes" layoutX="255.0" prefHeight="17.0" prefWidth="100.0" style="-fx-background-color: #daa520;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="returnbutton" mnemonicParsing="false" prefHeight="48.0" prefWidth="40.0" style="-fx-background-color: #6b8e23;">
+         <graphic>
+            <ImageView fx:id="imageretour" fitHeight="45.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/boutton_retour.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextArea fx:id="descriptionplante" layoutX="94.0" layoutY="168.0" prefHeight="43.0" prefWidth="404.0" style="-fx-background-color: #daa520;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextArea>
+      <ImageView fitHeight="93.0" fitWidth="146.0" layoutX="102.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true" />
+      <HBox fx:id="conteneurplante" layoutX="95.0" layoutY="255.0" prefHeight="100.0" prefWidth="447.0" style="-fx-border-color: #daa520;">
+         <children>
+            <ImageView fx:id="imageplante1" fitHeight="100.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageplante2" fitHeight="100.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageplante3" fitHeight="100.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageplante4" fitHeight="100.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <Button fx:id="ajouterImage" alignment="CENTER" layoutX="254.0" layoutY="358.0" onAction="#addImage" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #daa520;" text="Ajouter une image" />
+      <HBox fx:id="boxdescription" layoutX="94.0" layoutY="142.0" prefHeight="26.0" prefWidth="127.0">
+         <children>
+            <Text fx:id="textdescriptionplante" fill="GOLDENROD" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: bold;" text="Description de la plante :" underline="true" />
+         </children>
+      </HBox>
+      <HBox fx:id="boximage" layoutX="95.0" layoutY="229.0" prefHeight="26.0" prefWidth="83.0">
+         <children>
+            <Text fx:id="textimagesplante" fill="GOLDENROD" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: bold;" text="Images de la plante :" underline="true" wrappingWidth="146.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="plantationbox" layoutX="55.0" layoutY="135.0" prefHeight="40.0" prefWidth="524.0" visible="false">
+         <children>
+            <CheckBox mnemonicParsing="false" prefHeight="41.0" prefWidth="145.0" style="-fx-background-color: #daa520;" text="Tâche de plantation" />
+            <TextArea fx:id="plantationtext" prefHeight="55.0" prefWidth="327.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="recoltebox" layoutX="55.0" layoutY="189.0" prefHeight="43.0" prefWidth="524.0" visible="false">
+         <children>
+            <CheckBox mnemonicParsing="false" prefHeight="47.0" prefWidth="145.0" style="-fx-background-color: #daa520;" text="Tâche de récolte" />
+            <TextArea fx:id="recoltetext" prefHeight="21.0" prefWidth="327.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="entretienbox" layoutX="55.0" layoutY="242.0" prefHeight="26.0" prefWidth="524.0" visible="false">
+         <children>
+            <CheckBox mnemonicParsing="false" prefHeight="49.0" prefWidth="145.0" style="-fx-background-color: #daa520;" text="Tâche d'entretien/coupe" />
+            <TextArea fx:id="entretientext" prefHeight="39.0" prefWidth="327.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="arrosagebox" layoutX="55.0" layoutY="293.0" prefHeight="41.0" prefWidth="524.0" visible="false">
+         <children>
+            <CheckBox mnemonicParsing="false" prefHeight="41.0" prefWidth="145.0" style="-fx-background-color: #daa520;" text="Tâche d'arrosage" />
+            <TextArea fx:id="arrosagetext" prefHeight="48.0" prefWidth="327.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="rembottagebox" layoutX="55.0" layoutY="350.0" prefHeight="41.0" prefWidth="524.0" visible="false">
+         <children>
+            <CheckBox mnemonicParsing="false" prefHeight="41.0" prefWidth="145.0" style="-fx-background-color: #daa520;" text="Tâche de rembottage" />
+            <TextArea fx:id="rembottagetext" prefHeight="48.0" prefWidth="327.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
